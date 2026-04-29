@@ -1,14 +1,16 @@
-sonar.projectKey=test
-sonar.projectName=test
+sonar.projectKey=Pytest
+sonar.projectName=Pytest
 sonar.projectVersion=1.0
 
 sonar.sources=.
-sonar.language=java
+sonar.language=python
 sonar.sourceEncoding=UTF-8
 
 sonar.java.binaries=target/classes
 sonar.python.coverage.reportPaths=coverage.xml
 sonar.exclusions=venv/**,tests/**,**/__pycache__/**
 
-sonar.host.url=http://3.137.179.187:9000
-sonar.login=sqp_3174cac60111ef20fc0d84c5892d177fafdd0826
+sonar.host.url=http://3.16.158.193:9000/
+sonar.login=sqp_730b879f5abdfb279d0ff85a0c1e7882a3d63f77
+
+
