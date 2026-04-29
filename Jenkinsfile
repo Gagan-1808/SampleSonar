@@ -18,7 +18,7 @@ pipeline {
         stage('Setup Virtual Environment') {
             steps {
                 sh '''
-                    sudo apt install python3-venv
+                    apt install python3-venv
                     . venv/bin/activate
                     pip install --upgrade pip
                     pip install -r requirements.txt
