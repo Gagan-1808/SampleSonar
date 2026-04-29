@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh '''
                     sudo apt install -y python3-venv
-                    . venv/bin/activate
+                    source venv/bin/activate
                     pip install --upgrade pip
                     pip install -r requirements.txt
                 '''
