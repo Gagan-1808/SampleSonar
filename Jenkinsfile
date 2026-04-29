@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         VENV = "venv"
-        SONAR_SCANNER = tool 'SonarScanner'  // configured in Jenkins tools
+        SONAR_SCANNER = tool 'sonar-scanner'  // configured in Jenkins tools
     }
 
     stages {
