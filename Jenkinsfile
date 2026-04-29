@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         VENV = "venv"
-        sonar-scanner = tool 'sonar-scanner'  // configured in Jenkins tools
+        SONAR_SCANNER = tool 'sonar-scanner'  // configured in Jenkins tools
     }
 
     stages {
@@ -42,7 +42,7 @@ pipeline {
             steps {
                 withSonarQubeEnv('Sonarqube') {
                     sh '''
-                        ${SONAR_SCANNER}/bin/sonar-scanner
+                        ${SONAR_SCANNER}/opt/sonar-scanner
                     '''
                 }
             }
