@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        VENV = "venv"
-        SONAR_SCANNER = tool 'sonar-scanner'  // configured in Jenkins tools
-    }
 
     stages {
 
@@ -40,11 +36,9 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('Sonarqube') {
                     sh '''
-                        ${SONAR_SCANNER}/opt/sonar-scanner
+                        /sonar-scanner
                     '''
-                }
             }
         }
 
