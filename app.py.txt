@@ -1,0 +1,30 @@
+# app.py
+
+students = []
+
+def add_student_data(name, age, course):
+    student = {
+        "name": name,
+        "age": age,
+        "course": course
+    }
+    students.append(student)
+    return student
+
+
+def get_students():
+    return students
+
+
+def search_student_by_name(name):
+    for student in students:
+        if student["name"].lower() == name.lower():
+            return student
+    return None
+
+
+def delete_student_by_name(name):
+    global students
+    original_len = len(students)
+    students = [s for s in students if s["name"].lower() != name.lower()]
+    return len(students) != original_len
