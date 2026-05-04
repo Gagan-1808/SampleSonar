@@ -10,7 +10,10 @@ sonar.java.binaries=target/classes
 sonar.python.coverage.reportPaths=coverage.xml
 sonar.exclusions=venv/**,tests/**,**/__pycache__/**
 
-sonar.host.url=http://3.16.158.193:9000/
-sonar.login=sqp_730b879f5abdfb279d0ff85a0c1e7882a3d63f77
+sonar.host.url=http://18.191.114.5:9000/
+sonar.login=sqp_ec885dbdaf1b5b645908a8ea66f4aeb380d9975c
+
+
+
 
 
