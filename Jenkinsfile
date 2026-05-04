@@ -36,9 +36,9 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                    sh '''
-                        sonar-scanner
-                    '''
+                    withSonarQubeEnv('sonarqube') {   // name must match Jenkins → System config
+                        sh 'sonar-scanner'
+                    }
             }
         }
 
