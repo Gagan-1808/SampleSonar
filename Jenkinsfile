@@ -54,7 +54,39 @@ pipeline {
                 }
             }
         }
+           stage('Notify – Quality Gate Passed') {
+            steps {
+                mail(
+                    to: "gagan.patwal.1@gmail.com",
+                    subject: "✅ Sample Python Project - SonarQube Quality Gate Passed – Build #${env.BUILD_NUMBER}",
+                    body: """
+Hi,
+
+Good news! The SonarQube Quality Gate has PASSED for the latest build.
+
+──────────────────────────────────────────
+Project     : "Sample Python Project"
+Branch      : main
+Build #     : ${env.BUILD_NUMBER}
+Build URL   : ${env.BUILD_URL}
+Repository  : ${env.GITHUB_PR_URL}
+──────────────────────────────────────────
+
+All checks have passed:
+  ✅ Tests with Coverage – PASSED
+  ✅ SonarQube Analysis  – PASSED
+  ✅ Quality Gate        – PASSED
+
+The code is clean and ready for review.
+
+Regards,
+Jenkins CI
+                    """
+                )
+            }
+        }
     }
+    
 
     post {
         always {
