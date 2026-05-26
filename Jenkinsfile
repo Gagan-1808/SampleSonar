@@ -69,7 +69,7 @@ Project     : "Sample Python Project"
 Branch      : main
 Build #     : ${env.BUILD_NUMBER}
 Build URL   : ${env.BUILD_URL}
-Repository  : ${env.GITHUB_PR_URL}
+Repository  : "https://github.com/Gagan-1808/SampleSonar.git"
 ──────────────────────────────────────────
 
 All checks have passed:
