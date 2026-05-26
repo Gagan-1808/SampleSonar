@@ -43,6 +43,7 @@ pipeline {
                                  -Dsonar.token=${SonarqubeProj}
                             '''
                     }
+                }
             }
         }
 
